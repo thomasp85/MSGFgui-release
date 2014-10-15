@@ -1,0 +1,892 @@
+/*
+	Element standards
+*/
+
+body {
+	margin: 0px;
+	background: #dfe2e2;
+}
+h4 {
+	margin: 10px 0;
+}
+hr {
+	margin: 10px 0;
+}
+/*
+	Layout
+*/
+
+/* Run pane */
+.lefts.Col {
+	width: 390px;
+	padding: 5px;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5)
+}
+
+#fileInput.Row {
+	top: 0;
+	height: 190px;
+	margin: 5px;
+}
+	#fileInput .listview {
+		height: 100px;
+		width: 310px;
+		display: inline-block
+	}
+	#fileInput .textview{
+		height: 24px;
+		width: 310px;
+		display: inline-block
+	}
+	.placeholder {
+		margin: 2px;
+		height: 1.3em;
+		font-size: 12px;
+		color: grey;
+		padding-left: 5px;
+		font-style: italic;
+	}
+
+#parameters.Row {
+	top: 195px;
+	bottom: 55px;
+	margin: 5px;
+}
+	#parameters .control-group {
+		margin-bottom: 10px;
+	}
+	#parameters .controls input[type="text"],
+	#parameters .controls input[type="number"] {
+		width: 40px;
+		text-align: right;
+	}
+	#parameters .controls {
+		margin-right: 3px;
+	}
+	#parameters .controls select {
+		width: 100%;
+	}
+	#parameters .controls select[name="tolUnit"] {
+		width: 65px;
+	}
+	#parameters .listview {
+		height: 60px;
+	}
+	#parameters .btn-group {
+		width: 100%;
+		padding-left: 5%;
+	}
+	#parameters .btn-group .btn {
+		width: 30%;
+	}
+
+#run.Row {
+	height: 60px;
+	bottom: 0;
+	margin: 5px;
+}
+
+	#run>div {
+		width: 100%;
+	}
+		#run .progress {
+			position: relative;
+			display: inline-block;
+			width: 310px;
+			height: 24px;
+		}
+		#run .progress .bar {
+			position: absolute;
+		}
+		#run .progress p {
+			position: relative;
+			width: 100%;
+			text-align: center;
+			padding: 3px;
+			font-size: smaller;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	#run button {
+		vertical-align: top;
+	}
+
+
+
+/* Results pane */
+.rights.Col {
+	left: 400px;
+	right: 0;
+}
+
+.iconmenu.Row {
+	top: 0;
+	height: 50px;
+}
+	.iconmenu svg {
+		margin: 10px;
+		width: 30px;
+		height: 30px;
+	}
+	.iconmenu div, .iconmenu a {
+		display: inline-block;
+	}
+		.iconmenu a:first-child {
+			margin-left: 30px;
+		}
+		.iconmenu div:last-child {
+			float: right;
+			margin-right: 30px
+		}
+			.iconmenu svg path {
+				fill: grey;
+			}
+			.iconmenu svg:hover path {
+				fill: darkgrey;
+			}
+
+#resulttabs.Row {
+	top: 50px;
+	bottom: 0;
+	background-color: whitesmoke;
+}
+#resulttabs .tabpane:not(.active) {
+		visibility: hidden;
+	}
+#resulttabs .tabpane.Row {
+		top: 40px;
+		bottom: 0;
+	}
+
+#sampleTab .plotArea {
+	top: 0;
+	bottom: 220px;
+}
+#samplePlots {
+	margin: auto;
+	white-space: nowrap;
+}
+#samplePlots div {
+	display: inline-block;
+}
+#sampleTab .infoArea {
+	height: 220px;
+	bottom: 0;
+}
+	#sampleTab .infoArea>div {
+		width: 500px;
+		margin: auto;
+	}
+		#sampleTab .infoArea>div>div {
+			display: table-cell;
+			width: 250px;
+			padding: 0 10px;
+		}
+		#sampleTab .infoArea select{
+			width: 230px;
+			margin-bottom: 0;
+		}
+			#sampleTab .infoArea .samples p {
+				font-size: x-small;
+				margin-top: 2px;
+				text-align: right;
+			}
+			#sampleTab .infoArea .samples p span:first-child {
+				font-weight: bold;
+			}
+			#sampleTab .infoArea .stat div {
+				width: 230px;
+			}
+			#sampleTab .infoArea .stat p {
+				margin: 0;
+				line-height: 1.5em
+			}
+			#sampleTab .infoArea .stat p span:first-child {
+				width: 150px;
+				text-align: right;
+				font-weight: bold;
+				display: inline-block;
+				margin-right: 10px;
+			}
+
+#idTab .plotArea {
+	top: 0;
+	bottom: 220px;
+}
+#idTab .plotArea div {
+	margin: auto;
+}
+#idTab .infoArea {
+	height: 220px;
+	bottom: 0;
+}
+	#idTab .infoArea div {
+		width: 750px;
+		margin: auto;
+	}
+		#idTab .infoArea div div {
+			display: table-cell;
+			width: 250px;
+			padding: 0 10px;
+		}
+		#idTab .infoArea select {
+			width: 230px;
+			margin-bottom: 0;
+		}
+		#idTab .infoArea p {
+			font-size: x-small;
+			margin-top: 2px;
+			text-align: right;
+		}
+		#idTab .infoArea p span:first-child {
+			font-weight: bold;
+		}
+
+#filterTab>.Col {
+	left: 0;
+	right: 0;
+}
+#filterTab .fdr {
+	height: 120px;
+}
+	#filterTab .fdr>h4{
+		text-align: center;
+	}
+	#filterTab .fdr>div{
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+#filterTab>div>hr {
+	position: relative;
+	top: 100px;
+	margin: 0 20px;
+}
+#filterTab>div>hr:nth-of-type(2) {
+	top: 410px;
+}
+#filterTab .sample {
+	top: 120px;
+	height: 300px;
+}
+	#filterTab .sample>div {
+		width: 675px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0 20px;
+	}
+	
+#filterTab .database {
+	top: 440px;
+	height: 300px;
+}
+	#filterTab .database>div {
+		width: 950px;
+		margin-right: auto;
+		margin-left: auto;
+		padding: 0 20px;
+	}
+	
+#filterTab .filterInfo>div>div{
+	display: inline-block;
+	width: 230px;
+	margin-right: 40px;
+	vertical-align: top;
+}
+#filterTab .filterInfo>div>div:last-child{
+	margin-right: 0;
+}
+	#filterTab .filterInfo>div>div+div {
+		width: 400px;
+	}
+		#filterTab .filterInfo>div>div+div>div {
+			width: inherit;
+		}
+		#filterTab .filterInfo .d3-slider {
+			width: 400px;
+		}
+	#filterTab .filterInfo>div>div+div+div {
+		width: 230px;
+	}
+	#filterTab .filterInfo>div>div+div h4 {
+		margin-bottom: 20px;
+	}
+	#filterTab .filterInfo>div>div+div h4:not(:first-child) {
+		margin-top: 45px;
+	}
+	#filterTab .filterInfo input{
+		display: block;
+		box-sizing: border-box;
+		height: 26px;
+	}
+	#filterTab .filterInfo select+p {
+		font-size: x-small;
+		font-weight: bold;
+		margin-top: 2px;
+		text-align: right;
+	}
+	#filterTab .filterInfo select+p span {
+		font-weight: normal;
+	}
+	#filterTab .filterInfo select, #filterTab .filterInfo input{
+		width: 230px;
+		margin-bottom: 0;
+	}
+	
+
+.listview, .textview {
+	background: white;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.textview table td:first-child,
+.listview table td:first-child {
+	padding-left: 3px;
+}
+.textview table td:last-child,
+.listview table td:last-child {
+	padding-right: 3px;
+}
+.textview table{
+	table-layout: fixed;
+	height: 100%;
+}
+.textview td {
+	height: 100%;
+}
+.listview {
+	overflow: auto;
+}
+.listview table {
+	min-width: 100%
+}
+
+
+.rightButtonPane {
+	display: inline-block;
+	vertical-align: top;
+}
+.rightButtonPane, .rightButton {
+	width: 70px;
+	margin-left: 4px
+}
+.rightButtonPane .btn {
+	width: 100%;
+}
+table {
+	font-size: 12px;
+}
+#modificationList tr {
+	width: 100%
+}
+select[name=sampleRemoveList] {
+	width: 80%;
+	left: 10%;
+	position: relative;
+}
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.selected {
+	background: #006dcc;
+	color: white;
+}
+#saveResults .btn-group {
+	margin-left: calc( 50% - 3 * 126px / 2 );
+}
+#saveResults .modal-body .btn {
+	width: 100px;
+}
+.modal .tabpane:not(.active) {
+    	display: none;
+	}
+#globalSettingsModal .tabbar {
+	background: none;
+	width: 80%;
+	margin: 0 10%;
+}
+#globalSettingsModal .tabpane {
+	clear: both;
+	background: whitesmoke;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #AAA;
+	position: relative;
+	top: -1px;
+}
+#globalSettingsModal .tabpane .control-group:last-child,
+#globalSettingsModal .tabpane form{
+	margin: 0;
+}
+#globalSettingsModal .listview {
+	height: 100px;
+}
+#globalSettingsModal .listview table{
+	margin: 4px 0;
+}
+#globalSettingsModal .listview table select{
+	height: 24px;
+}
+#globalSettingsModal .listview table p{
+	display: inline;
+	padding: 0 6px;
+	position: relative;
+	z-index: 2;
+	background: rgba(255,255,255,0);
+}
+#globalSettingsModal .listview table p.selected::before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 0;
+	bottom: -4px;
+	right: 0;
+	background: #006dcc;
+	border-radius: 4px;
+	z-index: -1;
+}
+#globalSettingsModal .listview table p:not(.selected){
+	color: grey;
+}
+#globalSettingsModal .listview table td:first-child{
+	width: 50%;
+}#globalSettingsModal .listview table td:nth-child(2){
+	text-align: center;
+}
+#globalSettingsModal .listview table td:last-child{
+	width: 1.5em;
+}
+#globalSettingsModal .listview table td:last-child p{
+	color: firebrick;
+	margin-right: 0;
+	padding-right: 0;
+}
+#globalSettingsModal .listview table tr:last-child{
+	text-align: center;
+	color: grey;
+	font-style: italic;
+}
+#globalSettingsModal .checkbox.inline {
+	margin-right: 15px;
+}
+#globalSettingsModal input[type=number] {
+	text-align: right;
+	width: 40px;
+}
+#globalSettingsModal input[type=number]+span {
+	margin-left: 10px;
+}
+#globalSettingsModal h5:first-child {
+	margin-top: 0;
+}
+#mzidAddModal .listview td:first-child::after {
+	content: 'waiting';
+	font-style: italic;
+	color: grey;
+	padding-left: 5px;
+	vertical-align: top;
+}
+#mzidAddModal .listview .validating td:first-child::after {
+	content: 'validating';
+}
+#mzidAddModal .listview .importing td:first-child::after {
+	content: 'importing';
+}
+#mzidAddModal .listview .done td:first-child::after {
+	content: 'done';
+}
+#mzidAddModal .listview td:first-child div {
+	display: inline-block;
+}
+#mzidAddModal .listview .invalid td:first-child p {
+	color: red;
+	font-style: italic;
+	margin: 0;
+}
+#mzidAddModal .listview td:last-child {
+	text-align: right;
+}
+#mzidAddModal .listview .valid td:last-child {
+	color: green;
+}
+#mzidAddModal .listview .invalid td:last-child {
+	color: red;
+}
+.sF-modal .selected {
+	background: none;
+	color: black;
+}
+#database, #datafiles {
+	width: 100%;
+}
+.tabbar {
+	clear:left;
+	float:left;
+	width:100%;
+	overflow:hidden;
+	font-size: small;
+	background: #dfe2e2;
+}
+.tabbar ul {
+	text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+	position: relative;
+}
+.tabbar ul li {
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    cursor: default;
+}
+.tabbar ul:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #AAA;
+    z-index: 1;
+}
+.tabbar ul:before {
+    z-index: 1;
+}
+.tabbar li.active {
+    z-index: 2;
+    border-bottom-color: whitesmoke;
+    
+}
+.tabbar ul li p {
+	padding:.4em .8em;
+	text-decoration:none;
+	border-left: 1px solid grey;
+	border-top: 1px solid grey;
+	border-right: 1px solid grey;
+	line-height:1.3em;
+	border-radius: 5px 5px 0px 0px;
+	margin: 0px 2px 0px 2px;
+	box-shadow: inset 0px -8px 15px -10px rgba(0,0,0,0.5);
+}
+.tabbar ul li.active p {
+	background: whitesmoke;
+	box-shadow: none;
+}
+.tabbar ul li p:hover {
+	background-color: whitesmoke;
+}
+
+/*
+	General classes
+*/
+.Row, .Col { 
+	overflow: hidden; 
+	position: absolute; 
+}
+.Row { 
+	left: 0; 
+	right: 0; 
+	}
+.Col { 
+	top: 0; 
+	bottom: 0; 
+}
+.scroll-x { 
+	overflow-x: auto; 
+}
+.scroll-y { 
+	overflow-y: auto; 
+}
+
+.centerOuter {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.centerOuterInline {
+    display: inline-table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.centerMiddle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centerInner {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+	SVG
+*/
+svg {
+	margin: 0;
+	padding: 0;
+}
+.axis {
+	fill: none;
+	stroke: black;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+	stroke-width: 1;
+	shape-rendering: crispedges;
+}
+.position.axis {
+	shape-rendering: auto;
+	stroke-width: 0.5;
+}
+.position.axis .domain{
+	stroke-width: 1;
+}
+.position.axis .tick text{
+	font-size: x-small;
+}
+.axis .domain {
+	stroke-width: 2
+}
+.axis text {
+	stroke: none;
+	fill: black;
+	shape-rendering: auto;
+}
+.axis .tick text {
+	font-size: small;
+}
+.axis .label {
+	font-size: small;
+	font-weight: normal;
+}
+.grid {
+	fill: none;
+	stroke: lightgrey;
+	stroke-width: 1;
+	stroke-linecap: square;
+	shape-rendering: crispedges;
+}
+
+.target {
+	fill: forestgreen;
+	stroke: forestgreen;
+}
+.decoy {
+	fill: darkred;
+	stroke: darkred;
+}
+
+.line.target, .line.decoy {
+	fill: none;
+}
+
+.area.target, .area.decoy {
+	fill-opacity: 0.3;
+	stroke: none;
+}
+
+
+.evidenceArc {
+	fill: lightgrey;
+}
+.evidenceArc.passFilter {
+	fill: forestgreen;
+}
+.evidenceArc.unSelected {
+	opacity: 0.5;
+}
+.evidenceArc.selected {
+	fill: steelblue;
+	stroke: black;
+}
+.ions line {
+	stroke: grey;
+	shape-rendering: crispedges;
+}
+.ions.fragment:not(.hidden) line {
+	stroke: black;
+}
+.ions.fragment.hidden text {
+	visibility: hidden;
+}
+.ions.parent line {
+	stroke: darkred
+}
+.trace .ms2 {
+	stroke: black;
+	fill: none;
+}
+.trace .ms2.parent {
+	fill: darkred;
+}
+
+
+
+
+
+
+
+
+/*
+	Sliders
+*/
+.d3-slider {
+    position: relative;
+    font-size: 1.1em;
+    background: lightgrey;
+    z-index: 2;
+    margin: 15px 10px;
+}
+
+.d3-slider-horizontal {
+    height: .3em;
+}  
+
+.d3-slider-range {
+  background:steelblue;
+  left:0px;
+  right:0px;
+  height: 0.3em;
+  position: absolute;
+}
+
+.d3-slider-range-vertical {
+  background:steelblue;
+  left:0px;
+  right:0px;
+  position: absolute;
+  top:0;
+}
+
+.d3-slider-vertical {
+    width: .3em;
+    height: 100px;
+}      
+
+.d3-slider-handle {
+    position: absolute;
+    width: 0.6em;
+    height: 1.2em;
+    background: forestgreen;
+    z-index: 3;
+}
+
+.d3-slider-handle:hover {
+    background: darkgreen;
+}
+.d3-slider-handle-text {
+	position: absolute;
+	font-size: small;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-ms-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+.d3-slider-handle-group:hover .d3-slider-handle-text, 
+.d3-slider-handle-group:active .d3-slider-handle-text {
+	opacity: 1;
+}
+
+.d3-slider-horizontal #handle-one.d3-slider-handle {
+    top: -.45em;
+    margin-left: -.6em;
+    border-radius: 50px 0px 0px 50px
+}
+.d3-slider-horizontal #text-one.d3-slider-handle-text {
+    top: -2.75em;
+    left: 0;
+}
+
+.d3-slider-horizontal #handle-two.d3-slider-handle {
+    top: -.45em;
+    border-radius: 0px 50px 50px 0px
+}
+.d3-slider-horizontal #text-two.d3-slider-handle-text {
+    top: -2.75em;
+    right: 0;
+    text-align: right;
+}
+
+.d3-slider-axis {
+    position: relative;
+    z-index: 1;    
+}
+
+.d3-slider-axis-bottom {
+    top: .3em;
+}
+
+.d3-slider-axis-right {
+    left: .3em;
+}
+
+.d3-slider-axis path {
+    stroke-width: 0;
+    fill: none;
+}
+
+.d3-slider-axis line {
+    fill: none;
+    stroke: #aaa;
+    shape-rendering: crispEdges;
+}
+
+.d3-slider-axis text {
+    font-size: 11px;
+}
+
+.d3-slider-vertical .d3-slider-handle {
+    left: -.25em;
+    margin-left: 0;
+    margin-bottom: -.6em;      
+}
+
+
+/*
+	Tooltip
+*/
+
+#tooltip {
+	position: absolute;
+	background: whitesmoke;
+	border: 1px solid grey;
+	border-radius: 5px;
+	z-index: 1000;
+	box-shadow: 0px 0px 20px black;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.25s ease-in;
+	-moz-transition: opacity 0.25s ease-in;
+	transition: opacity 0.25s ease-in;
+}
+#tooltip.fadein {
+	visibility: visible;
+	opacity: 1;
+}
+.tooltipTitle {
+	position: relative;
+	z-index: 2000;
+}
+.tooltip {
+	font-size: small;
+	text-align: justify;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
