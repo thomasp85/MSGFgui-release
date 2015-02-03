@@ -20,7 +20,6 @@ NULL
 #' @importFrom shiny reactiveValues reactive observe isolate invalidateLater downloadHandler
 #' @importFrom MSGFplus msgfPar runMSGF finished import
 #' @importFrom shinyFiles getVolumes shinyFileChoose
-#' @importFrom xlsx createWorkbook createSheet addDataFrame saveWorkbook
 #' @importFrom tools file_ext
 #' 
 #' @note This function should only be used as part of a runApp call
@@ -64,7 +63,7 @@ server <- function(input, output, session) {
         msgfPar(
             database=databaseSelection(),
             tolerance=list(value=as.numeric(input$tolValue), unit=input$tolUnit),
-            isotopeError=c(input$isoLow, input$isoHigh),
+            isotopeError=c(input$isoLow,input$isoHigh),
             tda=ifelse(is.null(input$tda), FALSE, TRUE),
             fragmentation=as.numeric(input$fragMethod),
             instrument=as.numeric(input$instrument),
